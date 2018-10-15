@@ -4,7 +4,7 @@
 ### Question 1
 Prompt 1: Ask a question that requires a student to understand basic manipulation of files. Your question should require an answer using at least the following commands/concepts: ls, touch, mv, rm
 
-Response: Log onto the HPC into your class directory. See all the files in the folder of your name. Make a file named "testing". Confirm that "testing" file was made. Change the name of "testing" to "awesomeness". Confirm the name change has been made. Remove "awesomeness"
+Response: Log onto the HPC into your class directory. See all the files in the folder of your name. Make a file named "testing". Confirm that "testing" file was made. Change the name of "testing" to "awesomeness". Confirm the name change has been made. Remove "awesomeness". What are the codes you would need to accomplish these commands?
 
 Script:
 
@@ -57,6 +57,28 @@ Prompt 2: Ask a question that requires a student to understand how to create a s
 -*Hint 1:* in order for a script to be executable, it must be readable and executable
 -*Hint 2:* in order for a script to be executable, all of its parent directories must be executable
 
-Response:
+Response: Make a directory with your username. Go into that directory and make a file with the name "foo". Within "foo" write a simple echo command. Make "foo" usable by everyone, but only writeable by you. Confirm the expected permissions. Remember, in order for other people to access "foo" they would need to have access to your parent directory, but they won't have to write everything that is within the parent directory. Also, in order for a script to be executable, it must be readable and executable. What are the scripts you would need to accomplish these steps?
 
 Script:
+To change permissions of your parent directory and "foo".
+```sh
+$ pwd
+$ cd /pub/jje/ee282/
+$ mkdir $USER
+$ chmod 755 $USER
+$ ll $USER
+$ cd $USER/
+$ touch foo
+$ ls
+$ chmod 755 foo
+$ ll foo
+```
+
+To write a simple echo command for "foo"
+```sh
+$ cd /$USER/
+$ nano foo
+$ echo "Mission Accomplished." #Save and exit out of foo
+$ source foo
+```
+The output should be: Mission Accomplished. After excecuting the above codes, someone else should be able to access the user's directory and execute foo. 
