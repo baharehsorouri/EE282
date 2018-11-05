@@ -18,6 +18,8 @@ $ mv testing awesomeness
 $ ls
 $ rm awesomeness
 ```
+### Q1 Comments:
+Question 1 was done great! The only thing I would recommend is to not include $ as it makes it difficult to copy and paste and run your code. Other that that it is perfect.
 
 ### Question 2
 **Prompt 2: Ask a question that requires a student to understand the difference between accessing a column in a matrix with numeric indices versus accessing a column in a data frame with numeric indices. Your question should require an answer comparing the following: mymatrix[,1] vs. mydf[,1] vs. mydf[1] vs. mydf[[1]].**
@@ -81,3 +83,10 @@ $ echo "Mission Accomplished." #Save and exit out of foo
 $ source foo
 ```
 The output should be: Mission Accomplished. After excecuting the above codes, someone else should be able to access the user's directory and execute foo. 
+
+### Q1 Comments
+This is also done very well. The only recommendation is that source is typically used for running commands from a file for changing your Shell environment. For executing BASH script files, I recommend running bash foo. Also I recommend adding the .sh extension to all your bash scripts so that if you ever needed to find a particular or all script files you could execute the command below to find all scripts in all subdirectories from your current working directory.
+
+```sh
+find . -name "*.sh"
+```
