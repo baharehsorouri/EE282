@@ -50,6 +50,9 @@ mydf[['col1']]
 
 ```
 
+### Q2 Comments:
+
+Good job.
 
 ### Question 3
 
